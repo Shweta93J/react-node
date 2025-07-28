@@ -1,0 +1,95 @@
+# 📄 Test Plan & README
+
+## Project: React + Node.js Automated Testing
+
+This project demonstrates automated testing for a simple full-stack application consisting of a **React frontend** and a **Node.js backend API**. It includes test coverage for UI and API functionality using **Playwright** and **Supertest** respectively.
+
+---
+
+## ✅ Objectives
+- Test login functionality with valid and invalid credentials.
+- Test CRUD operations for a basic item (e.g., Todo/User).
+- Validate frontend and backend behavior through automation.
+
+---
+
+## 🔧 Tools Used
+| Tool        | Purpose                         |
+|-------------|---------------------------------|
+| Playwright  | UI end-to-end testing           |
+| Supertest   | API testing for Node.js backend |
+| Mocha       | Test runner for API tests       |
+
+---
+
+## 🧪 Test Coverage
+
+### UI Automation (React)
+- [x] Login with valid credentials
+- [x] Login with invalid credentials
+- [x] Create a new item
+- [x] Edit an existing item
+- [x] Delete an item
+- [x] Assert visibility of expected data
+
+### API Automation (Node.js)
+- [x] `POST /login` – success & failure scenarios
+- [x] `GET /items` – fetch list of items
+- [x] `POST /items` – create a new item
+- [x] `PUT /items/:id` – update existing item
+- [x] `DELETE /items/:id` – delete item
+
+---
+
+## 🚀 How to Run the Tests
+
+### 1. Setup
+```bash
+# Install dependencies
+npm install
+```
+
+### 2. Start Backend and Frontend
+```bash
+# In one terminal
+cd server && npm start
+
+# In another terminal
+cd client && npm start
+```
+
+### 3. Run API Tests
+```bash
+npm run test:api
+```
+
+### 4. Run UI Tests (Playwright)
+```bash
+npx playwright test
+```
+
+---
+
+## 📝 Assumptions & Notes
+- Test credentials: `admin / 1234`
+- This is a basic example with no persistent DB — uses in-memory objects.
+- Login token (if used) is mocked for simplicity.
+- UI locators (`#username`, `#password`, etc.) must match actual React app.
+
+---
+
+## 📂 File Structure
+```
+project-root/
+├── client/               # React frontend
+├── server/               # Node.js backend (Express)
+├── tests/
+│   ├── api.test.js       # API tests with Supertest
+│   └── ui.test.js        # UI tests with Playwright
+├── playwright.config.js  # Playwright setup
+└── README.md / Test Plan
+```
+
+## 👤 Author
+**Shweta Kumari**  
+Senior QA Engineer  
